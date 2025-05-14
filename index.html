@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="static/figures/social_media_icon.png" />
+    <meta property="og:title" content="G-DReaM: Graph-conditioned Diffusion Retargeting across Multiple Embodiments"/>
+    <meta property="og:url" content="https://CaoZhefeng.github.io/G-DReaM-page/"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+
+    <title>G-DReaM: Graph-conditioned Diffusion Retargeting across Multiple Embodiments</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ3PYPGJRH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PQ3PYPGJRH');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+    <link rel="icon" href="static/figures/icon.png">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+
+<section class="publication-header">
+    <div class="hero-body">
+        <div class="container is-max-widescreen">
+            <!-- <div class="columns is-centered"> -->
+            <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">G-DReaM: Graph-conditioned Diffusion Retargeting across Multiple Embodiments</h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- <section class="conference-name-block">
+    <div class="column has-text-centered">
+        <div class="title is-4 conference-name">
+            SIGGRAPH 2025 Conference 
+        </div>
+    </div>
+</section> -->
+<section class="publication-author-block">
+
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered" -->
+<!--
+                    to anonimyze:
+                    1. remove author names (till "..indicates equal...")
+                    2. change link to video.
+                    3. remove bibtex reference.
+-->
+                    <div class="column has-text-centered">
+                        <div class="is-size-4 publication-authors">
+                            <span class="author-block">Anonymous Author(s)</span>
+                        </div>
+                    </div>
+                  <!-- <div class="column has-text-centered">
+                        <div class="is-size-4 publication-authors">
+                            <span class="author-block">
+                                <a href="https://www.linkedin.com/in/inbar-gat-3212501ba/" target="_blank">Inbar Gat<sup>*</sup></a>,
+                                <a href="https://sigal-raab.github.io/" target="_blank">Sigal Raab<sup>*</sup></a>,
+                                <a href="https://guytevet.github.io/" target="_blank">Guy Tevet</a>,
+                                <a href="https://github.com/yuval-reshef" target="_blank">Yuval Reshef</a>,
+                                <br/>
+                                <a href="https://www.cs.tau.ac.il/~amberman/" target="_blank">Amit H. Bermano</a>,
+                                <a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span>
+                                <sup></sup></span>
+                        </div>
+                    </div> -->
+ 
+
+
+        <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">Tel Aviv University, Israel</span>
+            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+        </div> -->
+ 
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <span class="link-block">
+                            <!--a href="https://openreview.net/pdf?id=DrhZneqz4n" target="_blank" class="external-link button is-normal is-rounded"-->
+                            <!-- a href="https://arxiv.org/abs/2302.05905" target="_blank" class="external-link button is-normal is-rounded" -->
+                                <a href="https://arxiv.org/abs/2502.17327" target="_blank" class="external-link button is-normal is-rounded">
+                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://github.com/Anytop2025/Anytop" target="_blank" class="external-link button is-normal is-rounded">
+                                    <span class="icon"><i class="fab fa-github"></i></span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+
+                            <span class="link-block">
+                                <a href="https://youtu.be/FW1xItq41Mk" target="_blank" class="external-link button is-normal is-rounded">
+                                    <span class="icon"><i class="fab fa-youtube"></i></span>
+                                    <span>Video</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+
+            <div class="column is-centered has-text-centered">
+            <!--img src="static/figures/dragon_morelight2 (1).png" alt="breakdancing dragons" width="80%"/>
+            </div-->
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/First/teaser.mp4" type="video/mp4">
+             </video>
+            <h2 class="subtitle has-text-centered">
+                G-DReaM can be uniformly applied to heterogeneous embodiments without requiring their motion data, even when their skeletons are non-homeomorphic.
+            </h2>
+        </div>
+    </div>
+</section>
+
+
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Motion retargeting for specific robot from existing motion datasets is one critical step in transferring motion patterns from human behaviors to and across various robots. 
+                        However, inconsistencies in topological structure, geometrical parameters as well as joint correspondence make it difficult to handle diverse embodiments with a unified retargeting architecture. 
+                        In this work, we propose a novel unified graph-conditioned diffusion-based motion generation framework for retargeting reference motions across diverse embodiments. 
+                        The intrinsic characteristics of heterogeneous embodiments are represented with graph structure that effectively captures topological and geometrical features of different robots. 
+                        Such a graph-based encoding further allows for knowledge exploitation at the joint level with a customized attention mechanisms developed in this work. For lacking ground truth motions of the desired embodiment, 
+                        we utilize an energy-based guidance formulated as retargeting losses to train the diffusion model.
+                        As one of the first cross-embodiment motion retargeting methods in robotics, our experiments validate that the proposed model can retarget motions across heterogeneous embodiments in a unified manner. 
+                        Moreover, it demonstrates a certain degree of generalization to both diverse skeletal structures and similar motion patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+
+<section class="section hero">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="item">
+                <p style="margin-bottom: 30px">
+                    <!-- public SIGA -->
+                    <!--iframe width="720" height="405" src="https://www.youtube.com/embed/7mA14Jp9QNc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe-->
+                    <!-- anonymous SIGA-->
+                    <iframe width="720" height="405" src="https://www.youtube.com/embed/FW1xItq41Mk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+
+                </p>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Overview</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        The denoising network is based on a transformer decoder with a noisy motion input \(X_t\) under the conditions of the reference motion \(\mathcal{M}\) and graphs \(g^{\mathcal{M},X} = \{ \phi_v^{\mathcal{M},X}, \phi_e^{\mathcal{M},X},\psi^{\mathcal{M},X}\}\). 
+                        The input motion is tokenized at the joint level, where the base joint and other joints are embedded by independent encoders. 
+                        Then spatial and temporal attentions extract the relationships between all joints and the chronological relationships along the time window. 
+                        In addition, the spatial attention  absorb the joint connectivity \(\psi\) to enrich the joint relationships. For other graphic conditions, 
+                        we use a multi-conditional cross attention to treat them individually. In particular, the reference motion condition \(\mathcal{M}\) is encoded using a similar transformer decoder and incorporates the joint correspondence \(\eta\) as an attention mask. 
+                        Finally, the predicted motion \(\hat{X}_0\) is output from a output decoder.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="content has-text-centered">
+
+                <img src="static/figures/framework.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Multi-Embodiment Motion Retargeting</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        AnyTop's cross-skeleton manifold enables the capture of both \(\textit{spatial}\) and \(\textit{temporal}\) correspondences, as semantically similar body parts and analogous poses across different skeletons exhibit similar latent representations. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Fight</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_fight/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_fight/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_fight/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_fight/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_fight/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_fight/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_fight/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Kick</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_kick/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_kick/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_kick/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_kick/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_kick/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_kick/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_kick/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Stand Up</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_standup/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_standup/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_standup/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_standup/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_standup/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_standup/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_standup/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Throw Ball</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_throw/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_throw/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_throw/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_throw/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_throw/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_throw/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_throw/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Stagger</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_walk/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_walk/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_walk/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_walk/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_walk/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_walk/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp1_walk/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Embodiment Generalization</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        AnyTop's cross-skeleton manifold enables the capture of both \(\textit{spatial}\) and \(\textit{temporal}\) correspondences, as semantically similar body parts and analogous poses across different skeletons exhibit similar latent representations. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Fight</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_fight/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp2_fight/talos.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Talos</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp2_fight/val.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Valkyrie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Kick</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_kick/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp2_kick/talos.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Talos</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp2_kick/val.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Valkyrie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Stand Up</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_standup/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp2_standup/talos.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Talos</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp2_standup/val.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Valkyrie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Throw Ball</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_throw/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp2_throw/talos.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Talos</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp2_throw/val.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Valkyrie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered">Stagger</h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp1_walk/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp2_walk/talos.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Talos</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp2_walk/val.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Valkyrie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Motion Generalization</h2>
+                <h3 class="subtitle is-4">(Link Length Aspect)</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
+                        of ground truth poses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Unscaled Case</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_len1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><small><b>Monkey (top left) depicts the reference skeleton, while the fox, scorpion, and bird depict different target skeletons. 
+                        Target skeleton joints are color-coded to match their corresponding joints in the reference. 
+                        For better visualization, we color the bones to match their adjacent joints. 
+                        Note the correspondence in limbs, spine, and tail.</b></small></p>
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Scaled Case</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_len2.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><small><b>Monkey (top row) features the reference motion, while the Crab and Lynx represent two target motions. The frames of the targets are color-coded to align with their corresponding reference frames.
+                        Note the correspondence: aggressive motion segments are pink, idle frames blue, and transitional frames green.</b></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Motion Generalization</h2>
+                <h3 class="subtitle is-4">(Joint Correspondence Aspect)</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
+                        of ground truth poses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Without Correspondence</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_cor_F.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><small><b>Monkey (top left) depicts the reference skeleton, while the fox, scorpion, and bird depict different target skeletons. 
+                        Target skeleton joints are color-coded to match their corresponding joints in the reference. 
+                        For better visualization, we color the bones to match their adjacent joints. 
+                        Note the correspondence in limbs, spine, and tail.</b></small></p>
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>With Correspondence</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_cor_T.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><small><b>Monkey (top row) features the reference motion, while the Crab and Lynx represent two target motions. The frames of the targets are color-coded to align with their corresponding reference frames.
+                        Note the correspondence: aggressive motion segments are pink, idle frames blue, and transitional frames green.</b></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Motion Generalization</h2>
+                <h3 class="subtitle is-4">(Adaptation for New Embodiments)</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
+                        of ground truth poses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Jump</span></h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_jump/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_jump/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_jump/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_jump/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_jump/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_jump/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_jump/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Kick</span></h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_kick/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_kick/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_kick/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_kick/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_kick/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_kick/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_kick/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Run</span></h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_run/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_run/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_run/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_run/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_run/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_run/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_run/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-fullhd">
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Walk</span></h2>
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_walk/ref.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Reference</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_walk/Atlas.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Atlas</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_walk/CL.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>CL</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_walk/G1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>G1</b></p>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-centered" id="video-container">
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/exp3_walk/H1.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>H1</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_walk/Tron.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Tron</b></p>
+                </div>
+                <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="static/videos/exp3_walk/Cassie.mp4"
+                                type="video/mp4">
+                    </video>
+                    <p><b>Cassie</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+            @article{gat2025anytop,
+                title={AnyTop: Character Animation Diffusion with Any Topology},
+                author={Gat, Inbar and Raab, Sigal and Tevet, Guy and Reshef, Yuval and Bermano, Amit H and Cohen-Or, Daniel},
+                journal={arXiv preprint arXiv:2502.17327},
+                year={2025}
+              }
+        </code></pre>
+    </div>
+</section> 
+
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+        <div class="column is-8">
+            <div class="content">
+                <p>
+                    This website is licensed under a <a rel="license"
+                                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                    Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If
+                    you want to reuse their <a
+                        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them
+                    appropriately.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+
+<script>
+    const videos = document.querySelectorAll('.sync-video');
+  
+    let isSeeking = false;
+  
+    // 等所有视频加载完后统一播放
+    Promise.all(Array.from(videos).map(video => {
+      return new Promise(resolve => {
+        video.onloadeddata = () => resolve();
+      });
+    })).then(() => {
+      // 将第一个视频作为主参考
+      const master = videos[0];
+      master.currentTime = 0;
+  
+      // 所有视频跳到起点
+      videos.forEach(v => v.currentTime = 0);
+  
+      // 所有视频一起播放
+      videos.forEach(v => v.play());
+  
+    //   // 每帧对齐（可选优化）
+    //   setInterval(() => {
+    //     const current = master.currentTime;
+    //     videos.forEach(v => {
+    //       if (Math.abs(v.currentTime - current) > 0.05) {
+    //         v.currentTime = current;
+    //       }
+    //     });
+    //   }, 200);
+    });
+  
+    // // 绑定暂停 / 播放同步（可选增强）
+    // videos.forEach(video => {
+    //   video.addEventListener('pause', () => {
+    //     videos.forEach(v => v.pause());
+    //   });
+    //   video.addEventListener('play', () => {
+    //     videos.forEach(v => {
+    //       if (v.paused) v.play();
+    //     });
+    //   });
+    // });
+  </script>
+
+</body>
+</html>
