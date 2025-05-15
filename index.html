@@ -109,20 +109,18 @@
                     <div class="column has-text-centered">
                         <div class="publication-links">
                             <span class="link-block">
-                            <!--a href="https://openreview.net/pdf?id=DrhZneqz4n" target="_blank" class="external-link button is-normal is-rounded"-->
-                            <!-- a href="https://arxiv.org/abs/2302.05905" target="_blank" class="external-link button is-normal is-rounded" -->
-                                <a href="https://arxiv.org/abs/2502.17327" target="_blank" class="external-link button is-normal is-rounded">
+                                <a href="https://openreview.net/pdf?id=uMqMilE23q" target="_blank" class="external-link button is-normal is-rounded">
                                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                                     <span>Paper</span>
                                 </a>
                             </span>
 
-                            <span class="link-block">
+                            <!-- <span class="link-block">
                                 <a href="https://github.com/Anytop2025/Anytop" target="_blank" class="external-link button is-normal is-rounded">
                                     <span class="icon"><i class="fab fa-github"></i></span>
                                     <span>Code</span>
                                 </a>
-                            </span>
+                            </span> -->
 
                             <span class="link-block">
                                 <a href="https://youtu.be/FW1xItq41Mk" target="_blank" class="external-link button is-normal is-rounded">
@@ -246,7 +244,7 @@
                 <h2 class="title is-3">Multi-Embodiment Motion Retargeting</h2>
                 <div class="content has-text-justified">
                     <p>
-                        AnyTop's cross-skeleton manifold enables the capture of both \(\textit{spatial}\) and \(\textit{temporal}\) correspondences, as semantically similar body parts and analogous poses across different skeletons exhibit similar latent representations. 
+                        By leveraging graph structures, G-DReaM encodes both topological and geometric features of diverse robotic embodiments, allowing it to retarget motions across robots with varying link lengths, joint numbers, kinematic chains, and end-effectors in a unified way.
                     </p>
                 </div>
             </div>
@@ -582,14 +580,96 @@
     </div>
 </section>
 
+
 <section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="column is-centered has-text-centered">
                 <h2 class="title is-3">Embodiment Generalization</h2>
+                <h3 class="subtitle is-4">(Link Length Aspect)</h3>
                 <div class="content has-text-justified">
                     <p>
-                        AnyTop's cross-skeleton manifold enables the capture of both \(\textit{spatial}\) and \(\textit{temporal}\) correspondences, as semantically similar body parts and analogous poses across different skeletons exhibit similar latent representations. 
+                        G-DReaM demonstrates zero-shot generalization across embodiments with varying link lengths. The retargeted motion will be automatically adjusted to fit the specific link length, enabling better imitation of the reference motion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Unscaled Case</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_len1.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Scaled Case</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_len2.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <p><small><b>Here, we remove the joint correspondence of the knee for a more distinct comparative result. When the calf length is increased (right), the robot tends to bend its knee more to better track the reference position of the ankle joint.</b></small></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Embodiment Generalization</h2>
+                <h3 class="subtitle is-4">(Joint Correspondence Aspect)</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        G-DReaM demonstrates zero-shot generalization across embodiments with controllable joint correspondences. The retargeted motions can be automatically adjusted to align with the specified joint mappings.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>Without Correspondence</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_cor_F.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <p><big><b>With Correspondence</b></big></p>
+                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
+                        <source src="./static/videos/len_cor/knee_cor_T.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <p><small><b> Here, we choose a scaled calf length setting to produce a more distinct comparative result. The green joints indicate those that are required to match the reference motion, while the red joints are not constrained. The results show that the generated motion adapts to better track the joints with defined correspondences. When the knee joint is unconstrained (left), the robot bends its knee to better align the ankle joint under the scaled configuration. </b></small></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <h2 class="title is-3">Embodiment Generalization</h2>
+                <h3 class="subtitle is-4">(Model Adaptation for New Embodiments)</h3>
+                <div class="content has-text-justified">
+                    <p>
+                        For diverse unseen embodiments, G-DReaM can adapt the pretrained model to new skeletons by conditioning it on new skeleton graphs during training, while keeping the original dataset unchanged. Here, we show the retargeted results of the adapted model on new robots \(\textit{Talos}\) and \(\textit{Valkyrie}\).
                     </p>
                 </div>
             </div>
@@ -753,110 +833,15 @@
     </div>
 </section>
 
-<section class="hero is-small is-light">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="column is-centered has-text-centered">
-                <h2 class="title is-3">Motion Generalization</h2>
-                <h3 class="subtitle is-4">(Link Length Aspect)</h3>
-                <div class="content has-text-justified">
-                    <p>
-                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
-                        of ground truth poses.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-
-                <div class="column is-centered has-text-centered">
-                    <p><big><b>Unscaled Case</b></big></p>
-                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
-                        <source src="./static/videos/len_cor/knee_len1.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><small><b>Monkey (top left) depicts the reference skeleton, while the fox, scorpion, and bird depict different target skeletons. 
-                        Target skeleton joints are color-coded to match their corresponding joints in the reference. 
-                        For better visualization, we color the bones to match their adjacent joints. 
-                        Note the correspondence in limbs, spine, and tail.</b></small></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <p><big><b>Scaled Case</b></big></p>
-                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
-                        <source src="./static/videos/len_cor/knee_len2.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><small><b>Monkey (top row) features the reference motion, while the Crab and Lynx represent two target motions. The frames of the targets are color-coded to align with their corresponding reference frames.
-                        Note the correspondence: aggressive motion segments are pink, idle frames blue, and transitional frames green.</b></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 <section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="column is-centered has-text-centered">
                 <h2 class="title is-3">Motion Generalization</h2>
-                <h3 class="subtitle is-4">(Joint Correspondence Aspect)</h3>
                 <div class="content has-text-justified">
                     <p>
-                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
-                        of ground truth poses.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-
-                <div class="column is-centered has-text-centered">
-                    <p><big><b>Without Correspondence</b></big></p>
-                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
-                        <source src="./static/videos/len_cor/knee_cor_F.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><small><b>Monkey (top left) depicts the reference skeleton, while the fox, scorpion, and bird depict different target skeletons. 
-                        Target skeleton joints are color-coded to match their corresponding joints in the reference. 
-                        For better visualization, we color the bones to match their adjacent joints. 
-                        Note the correspondence in limbs, spine, and tail.</b></small></p>
-                </div>
-                <div class="column is-centered has-text-centered">
-                    <p><big><b>With Correspondence</b></big></p>
-                    <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
-                        <source src="./static/videos/len_cor/knee_cor_T.mp4"
-                                type="video/mp4">
-                    </video>
-                    <p><small><b>Monkey (top row) features the reference motion, while the Crab and Lynx represent two target motions. The frames of the targets are color-coded to align with their corresponding reference frames.
-                        Note the correspondence: aggressive motion segments are pink, idle frames blue, and transitional frames green.</b></small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="hero is-small is-light">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="column is-centered has-text-centered">
-                <h2 class="title is-3">Motion Generalization</h2>
-                <h3 class="subtitle is-4">(Adaptation for New Embodiments)</h3>
-                <div class="content has-text-justified">
-                    <p>
-                        Generalization within a specific skeleton, featured as both \(\textit{temporal composition}\) - combining motion segments from dataset instances, and \(\textit{spatial composition}\) - introducing novel poses by combining skeletal parts
-                        of ground truth poses.
+                        G-DReaM also demonstrates zero-shot generalization to unseen motions. Specifically, we show that our model can successfully handle unseen motion sequences from the LAFAN1 Retargeting dataset.
                     </p>
                 </div>
             </div>
@@ -867,7 +852,7 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-fullhd">
-            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Jump</span></h2>
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">Unseen Motion: Jump</span></h2>
             <div class="columns is-multiline is-centered" id="video-container">
                 <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
                     <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
@@ -933,7 +918,7 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-fullhd">
-            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Kick</span></h2>
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">Unseen Motion: Kick</span></h2>
             <div class="columns is-multiline is-centered" id="video-container">
                 <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
                     <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
@@ -999,7 +984,7 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-fullhd">
-            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Run</span></h2>
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">Unseen Motion: Run</span></h2>
             <div class="columns is-multiline is-centered" id="video-container">
                 <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
                     <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
@@ -1066,7 +1051,7 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-fullhd">
-            <h2 class="title is-4 has-text-centered"><span style="color: red;">UnseenMotion: Walk</span></h2>
+            <h2 class="title is-4 has-text-centered"><span style="color: red;">Unseen Motion: Walk</span></h2>
             <div class="columns is-multiline is-centered" id="video-container">
                 <div class="column is-one-third has-text-centered" style="width: 30%; margin: 0 1.5%;">
                     <video class="sync-video" poster="" id="tree" playsinline autoplay muted loop style="width: 100%;">
@@ -1132,7 +1117,7 @@
 
 
 <!-- BibTeX -->
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>
@@ -1144,7 +1129,7 @@
               }
         </code></pre>
     </div>
-</section> 
+</section>  -->
 
 
 
@@ -1169,7 +1154,7 @@
     </div>
 </footer>
 
-
+<!-- 
 <script>
     const videos = document.querySelectorAll('.sync-video');
   
@@ -1213,7 +1198,7 @@
     //     });
     //   });
     // });
-  </script>
+  </script> -->
 
 </body>
 </html>
